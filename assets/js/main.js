@@ -609,6 +609,7 @@
       name,
       confirm,
       vegetarian,
+      guest_number,
       wish,
     } = data;
 
@@ -674,7 +675,7 @@
       didOpen: () => Swal.showLoading(),
     });
 
-    const sheetURL = "?sheet=confirm";
+    const sheetURL = "https://script.google.com/macros/s/AKfycbza_ENFickWmGozTJibBp-pl8YwU_uqE-pYw3jBG8RaLmp8vJdZS0nTfiDSrxB7o2FXKQ/exec?sheet=confirm";
 
     try {
       const res = await fetch(sheetURL, {
@@ -684,6 +685,7 @@
           name,
           confirm,
           vegetarian,
+          guest_number,
           wish,
         }),
       });
